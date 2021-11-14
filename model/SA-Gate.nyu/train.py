@@ -35,7 +35,8 @@ os.environ['MASTER_PORT'] = '169711'
 with Engine(custom_parser=parser) as engine:
     args = parser.parse_args()
 
-    cudnn.benchmark = True
+    # cudnn.benchmark = True
+    cudnn.benchmark = Flase
 
     seed = config.seed
     if engine.distributed:
