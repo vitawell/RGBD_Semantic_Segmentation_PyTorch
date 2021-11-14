@@ -18,7 +18,7 @@ cfg = C
 C.seed = 12345
 
 remoteip = os.popen('pwd').read()
-C.volna = '/home/chen/RGBD_Semantic_Segmentation_PyTorch/'      # this is the path to your repo 'RGBD_Semantic_Segmentation_PyTorch'
+C.volna = '/home/ouc-2080/xiangkunpeng/RGBD_Semantic_Segmentation_PyTorch/'      # this is the path to your repo 'RGBD_Semantic_Segmentation_PyTorch'
 
 """please config ROOT_dir and user when u first using"""
 C.repo_name = 'RGBD_Semantic_Segmentation_PyTorch'
@@ -78,7 +78,8 @@ C.lr = 2e-2
 C.lr_power = 0.9
 C.momentum = 0.9
 C.weight_decay = 5e-4
-C.batch_size = 16
+# C.batch_size = 16
+C.batch_size = 2
 C.nepochs = 400
 C.niters_per_epoch = 795 // C.batch_size * (800 // C.nepochs)
 C.num_workers = 2
