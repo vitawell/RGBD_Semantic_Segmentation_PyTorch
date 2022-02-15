@@ -7,9 +7,9 @@ Implement some state-of-the-art methods of RGBD Semantic Segmentation task in Py
 Currently, we provide code of:
 
 - **SA-Gate, ECCV 2020** [[arXiv](https://arxiv.org/abs/2007.09183)]
-  <img src='pic/sagate.png' width="600">
+
 - **Malleable 2.5D Convolution, ECCV 2020** [[arXiv](https://arxiv.org/abs/2007.09365)]
-  <img src='pic/malleable.png' width="600">
+
 
 
 
