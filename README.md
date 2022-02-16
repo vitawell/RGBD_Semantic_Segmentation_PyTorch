@@ -4,17 +4,6 @@
 
 Implement some state-of-the-art methods of RGBD Semantic Segmentation task in PyTorch.
 
-Currently, we provide code of:
-
-- **SA-Gate, ECCV 2020** [[arXiv](https://arxiv.org/abs/2007.09183)]
-
-- **Malleable 2.5D Convolution, ECCV 2020** [[arXiv](https://arxiv.org/abs/2007.09365)]
-
-
-
-
-## News
-
 - 2020/08/16
 
 Official code release for the paper **Malleable 2.5D Convolution: Learning Receptive Fields along the Depth-axis for RGB-D Scene Parsing**, *ECCV 2020*. [[arXiv](https://arxiv.org/abs/2007.09365)], [[code](./model/malleable2_5d.nyu.res101)]
