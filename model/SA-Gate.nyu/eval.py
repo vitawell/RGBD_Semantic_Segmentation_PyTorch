@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#在2080服务器上的环境为：rgbd
 # encoding: utf-8
 import os
 import cv2
@@ -9,6 +9,7 @@ import torch
 import torch.nn as nn
 import torch.multiprocessing as mp
 
+from PIL import Image ##保存验证图片需要添加这句，使用了Image.fromarray将矩阵转为图片
 from config import config
 from utils.pyt_utils import ensure_dir, link_file, load_model, parse_devices
 from utils.visualize import print_iou, show_img
