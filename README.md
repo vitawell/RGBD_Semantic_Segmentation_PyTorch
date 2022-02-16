@@ -1,5 +1,8 @@
 # RGBD_Semantic_Segmentation_PyTorch
 
+修改了model/SA-Gate.nyu/eval.py 中保存验证图片时的问题。
+
+
 ![license](https://img.shields.io/badge/license-MIT-green) ![PyTorch-1.0.0](https://img.shields.io/badge/PyTorch-1.0.0-blue)
 
 Implement some state-of-the-art methods of RGBD Semantic Segmentation task in PyTorch.
