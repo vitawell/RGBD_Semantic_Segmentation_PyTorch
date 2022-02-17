@@ -16,7 +16,9 @@ from utils.visualize import print_iou, show_img
 from engine.evaluator import Evaluator
 from engine.logger import get_logger
 from seg_opr.metric import hist_info, compute_score
-from nyu import NYUv2
+# from nyu import NYUv2
+from seacu import Seacu
+
 from network import DeepLab
 from dataloader import ValPre
 
@@ -188,7 +190,8 @@ if __name__ == "__main__":
                     'train_source': config.train_source,
                     'eval_source': config.eval_source}
     val_pre = ValPre()
-    dataset = NYUv2(data_setting, 'val', val_pre)
+    # dataset = NYUv2(data_setting, 'val', val_pre)
+    dataset = Seacu(data_setting, 'val', val_pre)
 
     with torch.no_grad():
         segmentor = SegEvaluator(dataset, config.num_classes, config.image_mean,
