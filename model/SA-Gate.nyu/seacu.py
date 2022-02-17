@@ -5,10 +5,10 @@ from datasets.BaseDataset import BaseDataset
 import os
 import cv2
 
-class NYUv2(BaseDataset):
+class Seacu(BaseDataset):
     def __init__(self, setting, split_name, preprocess=None,
                  file_length=None):
-        super(NYUv2, self).__init__(setting, split_name, preprocess, file_length)
+        super(Seacu, self).__init__(setting, split_name, preprocess, file_length)
         self._split_name = split_name
         self._img_path = setting['img_root']
         self._gt_path = setting['gt_root']
@@ -85,10 +85,7 @@ class NYUv2(BaseDataset):
 
     @classmethod
     def get_class_names(*args):
-        return ['wall','floor','cabinet','bed','chair','sofa','table','door','window','bookshelf','picture','counter','blinds',
-                'desk','shelves','curtain','dresser','pillow','mirror','floor mat','clothes','ceiling','books','refridgerator',
-                'television','paper','towel','shower curtain','box','whiteboard','person','night stand','toilet',
-                'sink','lamp','bathtub','bag','otherstructure','otherfurniture','otherprop']
+        return ['seacu','water']
     @classmethod
     def transform_label(cls, pred, name):
         label = np.zeros(pred.shape)
