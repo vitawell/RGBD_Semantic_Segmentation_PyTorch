@@ -14,7 +14,8 @@ import torch.backends.cudnn as cudnn
 from config import config
 from dataloader import get_train_loader
 from network import DeepLab
-from nyu import NYUv2
+# from nyu import NYUv2
+# 使用自己的数据集
 from seacu import Seacu
 
 from utils.init_func import init_weight, group_weight
@@ -49,7 +50,7 @@ with Engine(custom_parser=parser) as engine:
 
     # data loader
     # train_loader, train_sampler = get_train_loader(engine, NYUv2)
-    train_loader, train_sampler = get_train_loader(engine, Seacu)
+    train_loader, train_sampler = get_train_loader(engine, Seacu) # 使用自己的数据集
 
     if engine.distributed and (engine.local_rank == 0):
         tb_dir = config.tb_dir + '/{}'.format(time.strftime("%b%d_%d-%H-%M", time.localtime()))
