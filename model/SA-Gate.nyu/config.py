@@ -40,7 +40,9 @@ C.val_log_file = C.log_dir + '/val_' + exp_time + '.log'
 C.link_val_log_file = C.log_dir + '/val_last.log'
 
 """Data Dir and Weight Dir"""
-C.dataset_path = osp.join(C.volna, 'DATA/NYUDepthv2')
+# C.dataset_path = osp.join(C.volna, 'DATA/NYUDepthv2')
+C.dataset_path = osp.join(C.volna, 'DATA/seacu')
+
 C.img_root_folder = C.dataset_path
 C.gt_root_folder = C.dataset_path
 C.hha_root_folder = osp.join(C.dataset_path, 'HHA')
@@ -57,7 +59,9 @@ add_path(osp.join(C.root_dir, 'furnace'))
 from utils.pyt_utils import model_urls
 
 """Image Config"""
-C.num_classes = 40
+# C.num_classes = 40
+C.num_classes = 1
+
 C.background = 255
 C.image_mean = np.array([0.485, 0.456, 0.406])  # 0.485, 0.456, 0.406
 C.image_std = np.array([0.229, 0.224, 0.225])
