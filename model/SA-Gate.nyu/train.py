@@ -15,6 +15,8 @@ from config import config
 from dataloader import get_train_loader
 from network import DeepLab
 from nyu import NYUv2
+from seacu import Seacu
+
 from utils.init_func import init_weight, group_weight
 from engine.lr_policy import WarmUpPolyLR
 from engine.engine import Engine
@@ -46,7 +48,8 @@ with Engine(custom_parser=parser) as engine:
         torch.cuda.manual_seed(seed)
 
     # data loader
-    train_loader, train_sampler = get_train_loader(engine, NYUv2)
+    # train_loader, train_sampler = get_train_loader(engine, NYUv2)
+    train_loader, train_sampler = get_train_loader(engine, Seacu)
 
     if engine.distributed and (engine.local_rank == 0):
         tb_dir = config.tb_dir + '/{}'.format(time.strftime("%b%d_%d-%H-%M", time.localtime()))
