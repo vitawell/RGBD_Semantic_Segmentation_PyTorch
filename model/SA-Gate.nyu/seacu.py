@@ -28,6 +28,7 @@ class Seacu(BaseDataset):
         gt_path = os.path.join(self._gt_path ,names[1])
         item_name = names[1].split("/")[-1].split(".")[0]
         hha_path = os.path.join(self._hha_path, item_name + '.jpg')
+        # 注意hha图片是jpg还是png格式！
 
         img, gt, hha = self._fetch_data(img_path, gt_path, hha_path)
 
