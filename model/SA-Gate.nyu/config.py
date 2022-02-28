@@ -59,8 +59,8 @@ add_path(osp.join(C.root_dir, 'furnace'))
 from utils.pyt_utils import model_urls
 
 """Image Config"""
-# C.num_classes = 40
-C.num_classes = 1
+C.num_classes = 40
+# C.num_classes = 1 改类别数后模型报错
 
 C.background = 255
 C.image_mean = np.array([0.485, 0.456, 0.406])  # 0.485, 0.456, 0.406
