@@ -2,6 +2,10 @@
 
 修改了model/SA-Gate.nyu/eval.py 中保存验证图片时的问题。
 
+（anaconda环境rgbd）epoch1时loss为5，156时1，248时0.21，317时0.16，399时0.04。（训练一个epoch就要6个小时？） 使用最后的模型进行预测NYUv2测试集，mIU是42.6%，654个图花了476秒。 
+Train.txt 和 test.txt 后面不能有多余的空行。 
+config里面的niters-per-epoch改成2可以训练。类别共40类不能改。 
+labelme默认的红色标签可以训练，验证时显示是38类？保存的图片没有分割效果。 
 
 ![license](https://img.shields.io/badge/license-MIT-green) ![PyTorch-1.0.0](https://img.shields.io/badge/PyTorch-1.0.0-blue)
 
