@@ -128,7 +128,7 @@ If you want to generate HHA maps from Depth maps, please refer to [https://githu
 
 *We just take SA-Gate as an example. You could run other models in a similar way.*
 
-### Training
+### Training 训练
 
 Training on NYU Depth V2:
 
@@ -149,7 +149,7 @@ $ python -m torch.distributed.launch --nproc_per_node=$NGPUS train.py
 - Note that the only difference between `SA-Gate.nyu/` and `SA-Gate.nyu.432/` is the training/inference image crop size.
 - The tensorboard file is saved in `log/tb/` directory.
 
-### Inference
+### Inference 验证
 
 Inference on NYU Depth V2:
 
